@@ -93,3 +93,162 @@ background: #7247f1;
     font-size: 20px;
  }
 }
+/* How It Works */
+.how-list{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.how-item{
+    display: flex;
+        flex-direction: column;
+        gap: 8px;
+}
+.how-title-item{
+        font-weight: 600;
+        font-size: 18px;
+        color: #7b4fff;
+}
+@media only screen and (min-width: 1440px) {
+  .how-list{
+    flex-direction: row;
+    gap: 32px;
+  }
+  .how-item{
+width: 352px;
+  }
+  .how-title-item{
+    font-size: 20px;
+  }
+}
+/* About */
+.about-container{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+@media only screen and (min-width: 1440px) {
+ .about-wrapper{
+    width: 544px;
+ }
+ .about-container{
+    flex-direction: row;
+    align-items: start;
+ }
+}
+/* faq */
+.faq-img{
+    display: none;
+}
+.faq-acc {
+    display: flex;
+    flex-direction: column;
+    width: 343px;
+    margin: 0 auto;
+    gap: 12px;
+}
+
+.faq-acc-el {
+    position: relative;
+    transition: margin-bottom 0.3s ease;
+    border-bottom: 1px solid #7b4fff;
+}
+
+.faq-acc-el-title {
+    margin-bottom: 0;
+}
+
+.faq-acc-el-trigger {
+    background: inherit;
+    border: none;
+    border-radius: 22px;
+    padding: 0 0 16px;
+    width: 343px;
+    height: auto;
+font-family: "Figtree", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #7b4fff;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+
+.faq-acc-arr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: inherit;
+    transition: transform 0.3s ease;
+}
+
+.faq-acc-arr.is-hidden {
+    display: none;
+}
+
+.faq-acc-el-descr-frame {
+    background: inherit;
+    width: 343px;
+    text-align: left;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, border-bottom 0.3s ease;
+}
+
+.faq-acc-el.js-enabled .faq-acc-el-descr-frame {
+    visibility: hidden;
+}
+
+.faq-acc-el.open .faq-acc-el-trigger {
+    border-bottom: none;
+
+}
+
+.faq-acc-el.open .faq-acc-el-descr-frame {
+    visibility: visible;
+    opacity: 1;
+    border: none;
+
+    border-top: none;
+    padding: 0 20px 16px 0;
+    background:inherit;
+    width: 343px;
+    max-height: 500px;
+    margin-bottom: 16px;
+}
+
+
+@media only screen and (min-width: 1440px) {
+    .faq-acc {
+        width: 736px;
+        margin: 0 auto;
+        gap: 16px;
+    }
+    .faq-acc-el-trigger {
+    width: 736px;
+        font-size: 22px;
+    }
+    .faq-acc-el-descr-frame {
+    width: 736px;
+    }
+    .faq-acc-el.open .faq-acc-el-descr-frame {
+    width: 736px;
+    }
+    .faq-img{
+        display: block;
+    }
+    .faq-wrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 32px;
+    }
+}
